@@ -45,7 +45,7 @@ export async function pinterestCallback(req, res, next) {
     //   userData: userData
     // }
 
-    res.redirect('http://localhost:4200/dashboard');
+    res.redirect('https://piniffy.com/dashboard');
     // res.json({ "token": tokenData, "userData": userData.data });
   } catch (err) {
     next(err);
