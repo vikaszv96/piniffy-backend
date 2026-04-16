@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import session from 'express-session';
 
 import authRoutes from './routes/auth.routes.js';
+import pagesRoutes from './routes/pages.routes.js';
 // import pinterestRoutes from './routes/pinterest.routes.js';
 import { errorHandler } from './middlewares/error.middleware.js';
 
@@ -33,6 +34,7 @@ app.use(session({
 }));
 
 app.use('/auth', authRoutes);
+app.use('/auth', pagesRoutes);
 // app.use('/api/pinterest', pinterestRoutes);
 
 app.get('/health', (req, res) => {
